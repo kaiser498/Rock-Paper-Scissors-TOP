@@ -1,5 +1,7 @@
 console.log("Hello World!");
 
+let humanScore = 0, computerScore = 0;
+
 function oneGameRound() {
     let randomNumber = Math.floor(Math.random() * 100);
 
@@ -15,8 +17,10 @@ function oneGameRound() {
 
     let humanChoice = prompt("Enter your choice.", "").toLowerCase();
 
-    let humanScore, computerScore;
+    determineWinner(humanChoice, computerChoice);
+}
 
+function determineWinner(humanChoice, computerChoice) {
     if (computerChoice === "rock" && humanChoice === "paper") {
         console.log("You win this round.");
         humanScore++;
@@ -36,6 +40,6 @@ function oneGameRound() {
         console.log("Computer wins this round.");
         computerScore++;
     } else if (computerChoice === humanChoice) {
-        console.log("Tie!")
+        console.log("Tie!");
     }
 }
