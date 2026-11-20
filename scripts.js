@@ -17,7 +17,7 @@ function oneGameRound() {
 
     let humanChoice = prompt("Enter your choice.", "").toLowerCase();
 
-    determineWinner(humanChoice, computerChoice);
+    determineRoundWinner(humanChoice, computerChoice);
 }
 
 function determineRoundWinner(humanChoice, computerChoice) {
