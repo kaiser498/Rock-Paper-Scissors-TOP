@@ -56,10 +56,8 @@ function determineGameWinner() {
         oneGameRound();
         if (humanScore == 5) {
             console.log("Yay! You Won The GAME.");
-            console.log(`Human Score: ${humanScore} & Computer Score: ${computerScore}`);
         } else if (computerScore == 5) {
             console.log("Yay! Computer Won The GAME.");
-            console.log(`Human Score: ${humanScore} & Computer Score: ${computerScore}`);
         }
     }
 }
