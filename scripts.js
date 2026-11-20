@@ -11,3 +11,5 @@ if (randomNumber >= 0 && randomNumber < 33) {
 } else {
     computerChoice = "scissors";
 }
+
+let humanChoice = prompt("Enter your choice.","").toLowerCase();
