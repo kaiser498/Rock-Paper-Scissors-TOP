@@ -43,3 +43,16 @@ function determineRoundWinner(humanChoice, computerChoice) {
         console.log("Tie!");
     }
 }
+
+function determineGameWinner() {
+    while (humanScore < 5 && computerScore < 5) {
+        oneGameRound();
+        if (humanScore == 5) {
+            console.log("Yay! You Won The GAME.");
+        } else if (computerScore == 5) {
+            console.log("Yay! Computer Won The GAME.");
+        }
+    }
+}
+
+determineGameWinner();
