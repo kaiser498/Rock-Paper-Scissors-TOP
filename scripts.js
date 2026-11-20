@@ -16,4 +16,26 @@ function oneGameRound() {
     let humanChoice = prompt("Enter your choice.", "").toLowerCase();
 
     let humanScore, computerScore;
+
+    if (computerChoice === "rock" && humanChoice === "paper") {
+        console.log("You win this round.");
+        humanScore++;
+    } else if (computerChoice === "paper" && humanChoice === "scissors") {
+        console.log("You win this round.");
+        humanScore++;
+    } else if (computerChoice === "scissors" && humanChoice === "rock") {
+        console.log("You win this round.");
+        humanScore++;
+    } else if (computerChoice === "rock" && humanChoice === "scissors") {
+        console.log("Computer wins this round.");
+        computerScore++;
+    } else if (computerChoice === "paper" && humanChoice === "rock") {
+        console.log("Computer wins this round.");
+        computerScore++;
+    } else if (computerChoice === "scissors" && humanChoice === "paper") {
+        console.log("Computer wins this round.");
+        computerScore++;
+    } else if (computerChoice === humanChoice) {
+        console.log("Tie!")
+    }
 }
