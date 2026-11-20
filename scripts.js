@@ -51,15 +51,17 @@ function determineRoundWinner(humanChoice, computerChoice) {
     }
 }
 
-function determineGameWinner() {
-    while (humanScore < 5 && computerScore < 5) {
-        oneGameRound();
-        if (humanScore == 5) {
-            console.log("Yay! You Won The GAME.");
-        } else if (computerScore == 5) {
-            console.log("Yay! Computer Won The GAME.");
-        }
+function playGame() {
+    oneGameRound();
+    oneGameRound();
+    oneGameRound();
+    oneGameRound();
+    oneGameRound();
+    if (humanScore > computerScore) {
+        console.log("Yay! You won the game.");
+    } else {
+        console.log("Hehehe! Computer won the game.");
     }
 }
 
-determineGameWinner();
+playGame();
