@@ -20,7 +20,7 @@ function oneGameRound() {
     determineWinner(humanChoice, computerChoice);
 }
 
-function determineWinner(humanChoice, computerChoice) {
+function determineRoundWinner(humanChoice, computerChoice) {
     if (computerChoice === "rock" && humanChoice === "paper") {
         console.log("You win this round.");
         humanScore++;
