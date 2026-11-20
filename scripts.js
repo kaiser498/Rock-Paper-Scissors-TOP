@@ -24,23 +24,30 @@ function determineRoundWinner(humanChoice, computerChoice) {
     if (computerChoice === "rock" && humanChoice === "paper") {
         console.log("You win this round.");
         humanScore++;
+        console.log(`Human Score: ${humanScore} & Computer Score: ${computerScore}`);
     } else if (computerChoice === "paper" && humanChoice === "scissors") {
         console.log("You win this round.");
+        console.log(`Human Score: ${humanScore} & Computer Score: ${computerScore}`);
         humanScore++;
     } else if (computerChoice === "scissors" && humanChoice === "rock") {
         console.log("You win this round.");
         humanScore++;
+        console.log(`Human Score: ${humanScore} & Computer Score: ${computerScore}`);
     } else if (computerChoice === "rock" && humanChoice === "scissors") {
         console.log("Computer wins this round.");
         computerScore++;
+        console.log(`Human Score: ${humanScore} & Computer Score: ${computerScore}`);
     } else if (computerChoice === "paper" && humanChoice === "rock") {
         console.log("Computer wins this round.");
         computerScore++;
+        console.log(`Human Score: ${humanScore} & Computer Score: ${computerScore}`);
     } else if (computerChoice === "scissors" && humanChoice === "paper") {
         console.log("Computer wins this round.");
         computerScore++;
+        console.log(`Human Score: ${humanScore} & Computer Score: ${computerScore}`);
     } else if (computerChoice === humanChoice) {
         console.log("Tie!");
+        console.log(`Human Score: ${humanScore} & Computer Score: ${computerScore}`);
     }
 }
 
@@ -49,8 +56,10 @@ function determineGameWinner() {
         oneGameRound();
         if (humanScore == 5) {
             console.log("Yay! You Won The GAME.");
+            console.log(`Human Score: ${humanScore} & Computer Score: ${computerScore}`);
         } else if (computerScore == 5) {
             console.log("Yay! Computer Won The GAME.");
+            console.log(`Human Score: ${humanScore} & Computer Score: ${computerScore}`);
         }
     }
 }
