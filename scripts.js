@@ -1,6 +1,7 @@
 console.log("Hello World!");
 
-let humanScore = 0, computerScore = 0;
+let humanScore = 0, computerScore = 0, humanChoice = "";
+
 
 function oneGameRound() {
     let randomNumber = Math.floor(Math.random() * 100);
@@ -14,8 +15,6 @@ function oneGameRound() {
     } else {
         computerChoice = "scissors";
     }
-
-    let humanChoice = prompt("Enter your choice.", "").toLowerCase();
 
     determineRoundWinner(humanChoice, computerChoice);
 }
@@ -61,4 +60,27 @@ function playGame() {
     }
 }
 
-playGame();
+const rockBtn = document.createElement("button");
+const paperBtn = document.createElement("button");
+const scissorsBtn = document.createElement("button");
+
+rockBtn.textContent = "Rock";
+paperBtn.textContent = "Paper";
+scissorsBtn.textContent = "Scissors";
+
+rockBtn.addEventListener("click", () => {
+    humanChoice = "rock";
+    oneGameRound();
+});
+paperBtn.addEventListener("click", () => {
+    humanChoice = "paper";
+    oneGameRound();
+});
+scissorsBtn.addEventListener("click", () => {
+    humanChoice = "scissors";
+    oneGameRound();
+});
+
+const body = document.body;
+
+body.append(rockBtn, paperBtn, scissorsBtn);
