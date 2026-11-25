@@ -21,32 +21,25 @@ function oneGameRound() {
 
 function determineRoundWinner(humanChoice, computerChoice) {
     if (computerChoice === "rock" && humanChoice === "paper") {
-        console.log("You win this round.");
         humanScore++;
-        console.log(`Human Score: ${humanScore} & Computer Score: ${computerScore}`);
+        scoreMsg.innerText = `You win!\nHuman Score: ${humanScore} & Computer Score: ${computerScore}`;
     } else if (computerChoice === "paper" && humanChoice === "scissors") {
-        console.log("You win this round.");
-        console.log(`Human Score: ${humanScore} & Computer Score: ${computerScore}`);
         humanScore++;
+        scoreMsg.innerText = `You win!\nHuman Score: ${humanScore} & Computer Score: ${computerScore}`;
     } else if (computerChoice === "scissors" && humanChoice === "rock") {
-        console.log("You win this round.");
         humanScore++;
-        console.log(`Human Score: ${humanScore} & Computer Score: ${computerScore}`);
+        scoreMsg.innerText = `You win!\nHuman Score: ${humanScore} & Computer Score: ${computerScore}`;
     } else if (computerChoice === "rock" && humanChoice === "scissors") {
-        console.log("Computer wins this round.");
         computerScore++;
-        console.log(`Human Score: ${humanScore} & Computer Score: ${computerScore}`);
+        scoreMsg.innerText = `You lose!\nHuman Score: ${humanScore} & Computer Score: ${computerScore}`;
     } else if (computerChoice === "paper" && humanChoice === "rock") {
-        console.log("Computer wins this round.");
         computerScore++;
-        console.log(`Human Score: ${humanScore} & Computer Score: ${computerScore}`);
+        scoreMsg.innerText = `You lose!\nHuman Score: ${humanScore} & Computer Score: ${computerScore}`;
     } else if (computerChoice === "scissors" && humanChoice === "paper") {
-        console.log("Computer wins this round.");
         computerScore++;
-        console.log(`Human Score: ${humanScore} & Computer Score: ${computerScore}`);
+        scoreMsg.innerText = `You lose!\nHuman Score: ${humanScore} & Computer Score: ${computerScore}`;
     } else if (computerChoice === humanChoice) {
-        console.log("Tie!");
-        console.log(`Human Score: ${humanScore} & Computer Score: ${computerScore}`);
+        scoreMsg.innerText = `Tie!\nHuman Score: ${humanScore} & Computer Score: ${computerScore}`;
     }
 }
 
@@ -84,3 +77,10 @@ scissorsBtn.addEventListener("click", () => {
 const body = document.body;
 
 body.append(rockBtn, paperBtn, scissorsBtn);
+
+const div = document.createElement("div");
+
+const scoreMsg = document.createElement("p");
+scoreMsg.innerText = `\nHuman Score: ${humanScore} & Computer Score: ${computerScore}`;
+
+body.append(scoreMsg);  
