@@ -2,7 +2,6 @@ console.log("Hello World!");
 
 let humanScore = 0, computerScore = 0, humanChoice = "";
 
-
 function oneGameRound() {
     let randomNumber = Math.floor(Math.random() * 100);
 
@@ -16,10 +15,10 @@ function oneGameRound() {
         computerChoice = "scissors";
     }
 
-    determineRoundWinner(humanChoice, computerChoice);
+    playGame(humanChoice, computerChoice);
 }
 
-function determineRoundWinner(humanChoice, computerChoice) {
+function playGame(humanChoice, computerChoice) {
     if (computerChoice === "rock" && humanChoice === "paper") {
         humanScore++;
         scoreMsg.innerText = `You win!\nHuman Score: ${humanScore} & Computer Score: ${computerScore}`;
@@ -41,15 +40,14 @@ function determineRoundWinner(humanChoice, computerChoice) {
     } else if (computerChoice === humanChoice) {
         scoreMsg.innerText = `Tie!\nHuman Score: ${humanScore} & Computer Score: ${computerScore}`;
     }
-}
-
-function playGame() {
-    if (humanScore > computerScore) {
-        console.log("Yay! You won the game.");
-    } else if (humanScore < computerScore) {
-        console.log("Hehehe! Computer won the game.");
-    } else {
-        console.log("It's a tie.")
+    if (humanScore == 5) {
+        alert("Yay! You won the game.");
+        humanScore = 0;
+        computerScore = 0;
+    } else if (computerScore == 5) {
+        alert("Hehehe! Computer won the game.");
+        computerScore = 0;
+        computerScore = 0;
     }
 }
 
@@ -83,4 +81,4 @@ const div = document.createElement("div");
 const scoreMsg = document.createElement("p");
 scoreMsg.innerText = `\nHuman Score: ${humanScore} & Computer Score: ${computerScore}`;
 
-body.append(scoreMsg);  
+body.append(scoreMsg);
