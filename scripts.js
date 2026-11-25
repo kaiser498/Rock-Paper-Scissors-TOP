@@ -52,11 +52,6 @@ function determineRoundWinner(humanChoice, computerChoice) {
 }
 
 function playGame() {
-    oneGameRound();
-    oneGameRound();
-    oneGameRound();
-    oneGameRound();
-    oneGameRound();
     if (humanScore > computerScore) {
         console.log("Yay! You won the game.");
     } else if (humanScore < computerScore) {
